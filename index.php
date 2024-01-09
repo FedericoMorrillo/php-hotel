@@ -52,13 +52,13 @@ $hotels = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>PHP Hotel</title>
 </head>
 
 <body>
+    <!--senza tabella-->
     <?php
-    var_dump($hotels);
-    echo "<hr>";
 
     //ciclo
 
@@ -77,8 +77,146 @@ $hotels = [
     }
 
     //ciclo
-    ?>
 
+    ?>
+    <!--/senza tabella-->
+
+    <!--Tabella-->
+    <table class="table">
+
+        <thead>
+
+            <!--intestazione tabella-->
+            <tr>
+                <th scope="col">Hotel Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Parking</th>
+                <th scope="col">Vote</th>
+                <th scope="col">distance_to_center</th>
+            </tr>
+            <!--/intestazione tabella-->
+
+        </thead>
+
+        <tbody>
+
+            <!-- Row array[0]-->
+            <tr>
+
+                <!--Ciclo-->
+                <?php foreach ($hotels[0] as $key => $hotel_info) {
+
+                    if ($key === 'parking') {
+                        // Verifichiamo se 'parking' è true e assegnamo la stringa corrispondente
+                        $availability = $hotel_info ? 'Disponibile' : 'Non Disponibile';
+                        echo "<td>$availability</td>";
+                    } elseif ($key === 'distance_to_center') {
+                        // Aggiungo "km" alla colonna 'distance_to_center'
+                        echo "<td>$hotel_info km</td>";
+                    } else {
+                        echo "<td>$hotel_info</td>";
+                    }
+                }
+                ?>
+                <!--/Ciclo-->
+
+            </tr>
+            <!-- /Row array[0]-->
+
+            <!-- Row array[1]-->
+            <tr>
+
+                <!--Ciclo-->
+                <?php foreach ($hotels[1] as $key => $hotel_info) {
+
+                    if ($key === 'parking') {
+                        // Verifichiamo se 'parking' è true e assegnamo la stringa corrispondente
+                        $availability = $hotel_info ? 'Disponibile' : 'Non Disponibile';
+                        echo "<td>$availability</td>";
+                    } elseif ($key === 'distance_to_center') {
+                        // Aggiungo "km" alla colonna 'distance_to_center'
+                        echo "<td>$hotel_info km</td>";
+                    } else {
+                        echo "<td>$hotel_info</td>";
+                    }
+                }
+                ?>
+                <!--/Ciclo-->
+
+            </tr>
+            <!-- /Row array[1]-->
+
+            <!-- Row array[2]-->
+            <tr>
+
+                <!--Ciclo-->
+                <?php foreach ($hotels[2] as $key => $hotel_info) {
+
+                    if ($key === 'parking') {
+                        // Verifichiamo se 'parking' è true e assegnamo la stringa corrispondente
+                        $availability = $hotel_info ? 'Disponibile' : 'Non Disponibile';
+                        echo "<td>$availability</td>";
+                    } elseif ($key === 'distance_to_center') {
+                        // Aggiungo "km" alla colonna 'distance_to_center'
+                        echo "<td>$hotel_info km</td>";
+                    } else {
+                        echo "<td>$hotel_info</td>";
+                    }
+                }
+                ?>
+                <!--/Ciclo-->
+
+            </tr>
+            <!-- /Row array[2]-->
+
+            <!-- Row array[3]-->
+            <tr>
+
+                <!--Ciclo-->
+                <?php foreach ($hotels[3] as $key => $hotel_info) {
+
+                    if ($key === 'parking') {
+                        // Verifichiamo se 'parking' è true e assegnamo la stringa corrispondente
+                        $availability = $hotel_info ? 'Disponibile' : 'Non Disponibile';
+                        echo "<td>$availability</td>";
+                    } elseif ($key === 'distance_to_center') {
+                        // Aggiungo "km" alla colonna 'distance_to_center'
+                        echo "<td>$hotel_info km</td>";
+                    } else {
+                        echo "<td>$hotel_info</td>";
+                    }
+                }
+                ?>
+                <!--/Ciclo-->
+
+            </tr>
+            <!-- /Row array[3]-->
+
+            <!-- Row array[4]-->
+            <tr>
+
+                <!--Ciclo-->
+                <?php foreach ($hotels[4] as $key => $hotel_info) {
+
+                    if ($key === 'parking') {
+                        // Verifichiamo se 'parking' è true e assegnamo la stringa corrispondente
+                        $availability = $hotel_info ? 'Disponibile' : 'Non Disponibile';
+                        echo "<td>$availability</td>";
+                    } elseif ($key === 'distance_to_center') {
+                        // Aggiungo "km" alla colonna 'distance_to_center'
+                        echo "<td>$hotel_info km</td>";
+                    } else {
+                        echo "<td>$hotel_info</td>";
+                    }
+                }
+                ?>
+                <!--/Ciclo-->
+
+            </tr>
+            <!-- /Row array[4]-->
+        </tbody>
+    </table>
+    <!--/Tabella-->
 </body>
 
 </html>
