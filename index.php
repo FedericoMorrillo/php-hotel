@@ -56,6 +56,28 @@ $hotels = [
 </head>
 
 <body>
+    <?php
+    var_dump($hotels);
+    echo "<hr>";
+
+    //ciclo
+
+    foreach ($hotels as $hotel) {
+
+        //ciclo
+
+        foreach ($hotel as $key => $hotel_info) {
+            echo $key . ": " . $hotel_info;
+            echo "<br>";
+        }
+
+        //ciclo
+
+        echo "<hr>";
+    }
+
+    //ciclo
+    ?>
 
 </body>
 
